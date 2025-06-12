@@ -4,97 +4,174 @@
   <meta charset="UTF-8">
   <title>Portfólio de Rafaela Coelho</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #fdfdfd;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f5f7fa;
       color: #333;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .avatar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar img {
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     h1 {
+      text-align: center;
       color: #8a0057;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .bio {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
     }
 
     h2 {
-      margin-top: 2rem;
+      margin-top: 3rem;
       color: #444;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 4px;
     }
 
-    .projeto {
-      margin-bottom: 1.5rem;
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    .projeto strong {
-      font-size: 1.1rem;
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-title {
+      font-size: 1.2rem;
       color: #a0004f;
+      margin-bottom: 6px;
     }
 
-    .descricao {
-      margin-top: 0.2rem;
-      margin-bottom: 0.4rem;
+    .card-desc {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      background-color: #ffe2ec;
+      color: #8a0040;
+      font-size: 0.8rem;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin-left: 6px;
     }
 
     a {
       color: #0066cc;
       text-decoration: none;
+      font-weight: bold;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    .tag {
-      font-size: 0.9rem;
-      background-color: #f2cce1;
-      color: #6b003b;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-left: 6px;
+    .contact {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .icons a {
+      margin: 0 12px;
+      font-size: 1.5rem;
+      color: #8a0057;
+    }
+
+    .resume-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 18px;
+      border-radius: 6px;
+      background-color: #8a0057;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resume-button:hover {
+      background-color: #6b0043;
     }
   </style>
 </head>
 <body>
-  <h1>👩‍💻 Rafaela Coelho</h1>
-  <p>Estudante de Análise e Desenvolvimento de Sistemas na FECAP, apaixonada por backend, automações com IA e soluções criativas que conectam pessoas à tecnologia.</p>
 
-  <h2>🚀 Meus Projetos</h2>
-
-  <div class="projeto">
-    <strong>Sabor Solidário</strong>
-    <span class="tag">Plataforma de Doações</span>
-    <p class="descricao">Sistema que conecta ONGs e doadores de alimentos, com foco em transparência e simplicidade. Desenvolvido com HTML, CSS, JS e backend em Node.js + MySQL.</p>
-    <a href="https://github.com/seu-usuario/sabor-solidario" target="_blank">Ver repositório</a>
+  <div class="avatar">
+    <img src="https://i.imgur.com/1X6xYJL.png" alt="Foto de Rafaela">
   </div>
 
-  <div class="projeto">
-    <strong>FecaPay</strong>
-    <span class="tag">App Mobile</span>
-    <p class="descricao">Aplicativo Android para pagamentos universitários via QR Code, com cashback e integração com biblioteca, cantina e livraria. Desenvolvido com Java e SQLite.</p>
-    <a href="https://github.com/seu-usuario/fecapay" target="_blank">Ver repositório</a>
+  <h1>Rafaela Coelho</h1>
+  <p class="bio">Estudante de ADS na FECAP, apaixonada por backend, automações, IoT e soluções com impacto social.</p>
+
+  <h2>🚀 Projetos</h2>
+
+  <div class="projects">
+    <div class="card">
+      <div class="card-title">Sabor Solidário <span class="tag">Plataforma Social</span></div>
+      <div class="card-desc">Conecta ONGs a doadores de alimentos. HTML, JS, Node.js, MySQL.</div>
+      <a href="https://github.com/seu-usuario/sabor-solidario" target="_blank">Ver no GitHub</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">FecaPay <span class="tag">App Mobile</span></div>
+      <div class="card-desc">App de pagamento universitário via QR Code. Java + SQLite.</div>
+      <a href="https://github.com/seu-usuario/fecapay" target="_blank">Ver no GitHub</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Bot IA + Airtable <span class="tag">n8n + OpenAI</span></div>
+      <div class="card-desc">Atendimento automático com IA + registro no Airtable via n8n.</div>
+      <a href="https://github.com/seu-usuario/bot-ia-airtable" target="_blank">Ver no GitHub</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">IoT com ESP32 + Telegram <span class="tag">Segurança</span></div>
+      <div class="card-desc">Detecção de movimento com sensor PIR + notificações instantâneas no Telegram.</div>
+      <a href="https://github.com/seu-usuario/projeto-iot" target="_blank">Ver no GitHub</a>
+    </div>
   </div>
-
-  <div class="projeto">
-    <strong>Bot de Atendimento com IA + Airtable</strong>
-    <span class="tag">n8n + OpenAI</span>
-    <p class="descricao">Automatiza respostas de atendimento com IA e salva dados em base Airtable. Criado com n8n, Webhooks, OpenAI e integração externa.</p>
-    <a href="https://github.com/seu-usuario/bot-ia-airtable" target="_blank">Ver repositório</a>
-  </div>
-
-<div class="projeto">
-  <strong>Projeto IoT – Monitoramento com Sensor PIR e Telegram</strong>
-  <span class="tag">Internet das Coisas</span>
-  <p class="descricao">
-    Sistema de segurança residencial utilizando ESP32 e sensor PIR para detectar movimentos. Ao identificar presença, o dispositivo envia notificações automáticas via Telegram em tempo real, alertando os moradores sobre qualquer movimentação suspeita ou entrada não autorizada.
-  </p>
-  <a href="https://github.com/seu-usuario/projeto-iot" target="_blank">Ver repositório</a>
-</div>
-
 
   <h2>📫 Contato</h2>
-  <p>Email: <a href="mailto:rafaelacoelhobastos@gmail.com">rafaelacoelhobastos@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/rafaela-coelho-bastos/" target="_blank">linkedin.com/in/rafaela-coelho-bastos</a></p>
+  <div class="contact">
+    <div class="icons">
+      <a href="mailto:rafaela@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/seu-usuario" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/rafaelacoelho" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <a class="resume-button" href="curriculo-rafaela.pdf" download>📄 Baixar Currículo</a>
+  </div>
+
 </body>
 </html>
